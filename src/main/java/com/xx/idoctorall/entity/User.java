@@ -20,23 +20,26 @@ public class User implements Serializable {
     @ApiModelProperty("用户id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id;   //病号
     @ApiModelProperty("用户名")
-    private String username;
+    private String username;  //用户名
     @ApiModelProperty("用户密码")
     @JsonIgnore
-    private String password;
+    private String password;  //密码
     /**
      * TODO 忽略该字段的映射
      */
     @Transient
-    private String  email;
+    private String  email;  //邮箱
     @Transient
-    private boolean rememberMe;
+    private boolean rememberMe; //记住密码
 
-    private String name;
-    private int roleid;
-    private String phone;
-    private Date birthday;
-
+    private String name;  //姓名
+    private int roleid;   //角色id
+    private String phone; //电话
+    private Date birthday; //生日
+    private String idcard; //身份证
+    private String adress; //地址
+    private String sex;    //性别
+    private String logo;   //logo存储地址
 }

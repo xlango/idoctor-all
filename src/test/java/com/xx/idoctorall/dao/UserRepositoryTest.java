@@ -31,4 +31,10 @@ public class UserRepositoryTest extends BaseTests {
             System.out.println("用户：=============================="+user.getId());
         }
     }
+
+    @Test
+    public void getRoleidByUsername() {
+        User u=userRepository.getRoleidByUsername("111111");
+            System.out.println("================"+u.getRoleid());
+    }
 }

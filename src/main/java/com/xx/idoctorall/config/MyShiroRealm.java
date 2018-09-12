@@ -15,6 +15,7 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -107,7 +108,9 @@ public class MyShiroRealm extends AuthorizingRealm {
      */
     private Set<String> getRolesByUserName(String userName) {
         System.out.println("从数据库中取数据");
-        List<String> list=userRepository.getRolesByUsername(userName);
+        List<String> list=new ArrayList<>();
+        Integer roleid=userRepository.getRoleidByUsername(userName).getRoleid();
+        list.add(roleid.toString());
         Set<String> sets=new HashSet(list);
 
         return sets;

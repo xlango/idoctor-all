@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/test")
-@Api(tags = "1.1", description = "用户管理", value = "用户管理")
+@Api(description = "用户管理", value = "用户管理")
 @CrossOrigin
 public class TestController {
 

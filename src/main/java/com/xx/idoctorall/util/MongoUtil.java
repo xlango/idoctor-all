@@ -4,6 +4,7 @@ import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
+import com.mongodb.util.JSON;
 import com.xx.idoctorall.entity.Customer;
 import org.bson.Document;
 
@@ -28,7 +29,7 @@ public class MongoUtil {
             System.out.println(db);
         }
 
-        //获取集合
+       /* //获取集合
         MongoCollection<Document> coll = database.getCollection("test");
         //显示所有集合
         MongoIterable<String> collections = database.listCollectionNames();
@@ -72,7 +73,15 @@ public class MongoUtil {
         BasicDBObject deleteQuery = new BasicDBObject();
         deleteQuery.put("name", "mkyong");
 
-        table.remove(deleteQuery);
+        table.remove(deleteQuery);*/
+
+
+        // 构造一个Json字符串
+        String json = " {'school_code':'111111','school_name':'汉东政法大学','teacher_idcard':'0000001','teacher_name':'高育良' }";
+        MongoCollection<DBObject> collection = database.getCollection("kakfa", DBObject.class);
+        DBObject bson = (DBObject) JSON.parse(json);
+        collection.insertOne(bson);
+
 
     }
 
