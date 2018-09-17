@@ -1,4 +1,4 @@
-package com.xx.idoctorall.entity;
+package com.xx.diagnosisserver.entity;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
