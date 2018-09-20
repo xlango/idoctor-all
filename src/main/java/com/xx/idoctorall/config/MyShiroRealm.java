@@ -11,7 +11,6 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.util.ByteSource;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -117,7 +116,7 @@ public class MyShiroRealm extends AuthorizingRealm {
     }
 
     public static void main(String[] args) {
-        Md5Hash md5Hash=new Md5Hash("123456","333333");
-        System.out.println(md5Hash);
+        Md5Hash md5Hash=new Md5Hash("123456","222222");
+        System.out.println(String.valueOf(md5Hash));
     }
 }

@@ -13,4 +13,8 @@ public interface UserRepository extends CrudRepository<User, Long> {
     User getPasswordByUsername(String userName);
 
     User getRoleidByUsername(String userName);
+
+    User save(User user) ;
+
+
 }

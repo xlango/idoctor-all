@@ -37,4 +37,15 @@ public class UserRepositoryTest extends BaseTests {
         User u=userRepository.getRoleidByUsername("111111");
             System.out.println("================"+u.getRoleid());
     }
+
+    @Test
+    public void save() {
+        User user = new User();
+        user.setUsername("test");
+        user.setPassword("test");
+        user.setPhone("test");
+        user.setRoleid(2);
+
+        userRepository.save(user);
+    }
 }
