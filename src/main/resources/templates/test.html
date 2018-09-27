@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{js/jquery-3.1.1.js}"></script>
+    <script>
+        $.post("http://localhost:8760/",{name:"username"},function (data) {
+            console.log(data);
+        },"json");
+
+    </script>
+</head>
+<body>
+11111
+</body>
+</html>

@@ -1,7 +1,8 @@
 package com.xx.idoctorall.service.impl;
 
 import com.xx.idoctorall.config.CacheExpire;
-import com.xx.idoctorall.dao.UserRepository;
+import com.xx.idoctorall.dao.api.UserRepository;
+import com.xx.idoctorall.entity.relation.User;
 import com.xx.idoctorall.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,5 +23,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public String findAllByUsername(String username) {
         return userRepository.findAllByUsername(username).get(0).getUsername();
+    }
+
+    @Override
+    public User save(User user) {
+        return userRepository.save(user);
+    }
+
+    @Override
+    public User findByUsername(String userName) {
+        return userRepository.findByUsername(userName);
     }
 }

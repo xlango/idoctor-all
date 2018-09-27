@@ -5,10 +5,6 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
 import com.mongodb.util.JSON;
-import com.xx.idoctorall.entity.Customer;
-import org.bson.Document;
-
-import java.util.Date;
 
 public class MongoUtil {
 

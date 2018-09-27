@@ -1,7 +1,7 @@
 package com.xx.idoctorall.controller;
 
-import com.xx.idoctorall.entity.JSONResult;
-import com.xx.idoctorall.entity.RequestMessage;
+import com.xx.idoctorall.entity.custom.JSONResult;
+import com.xx.idoctorall.entity.custom.RequestMessage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

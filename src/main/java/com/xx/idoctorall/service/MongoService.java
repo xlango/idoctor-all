@@ -1,6 +1,6 @@
 package com.xx.idoctorall.service;
 
-import com.xx.idoctorall.entity.Customer;
+import com.xx.idoctorall.entity.test.Customer;
 
 import java.util.List;
 

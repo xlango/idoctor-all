@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Rollback(value = true)
+@Rollback(value = false)
 @Transactional(rollbackOn = Exception.class)
 public class BaseTests {
 

@@ -1,19 +1,16 @@
 package com.xx.idoctorall.controller;
 
-import com.netflix.discovery.DiscoveryClient;
-import com.xx.idoctorall.entity.JSONResult;
-import com.xx.idoctorall.entity.User;
+import com.xx.idoctorall.entity.custom.JSONResult;
+import com.xx.idoctorall.entity.relation.User;
 import com.xx.idoctorall.service.impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("/test")
 @Api(description = "用户管理", value = "用户管理")
 @CrossOrigin
 public class TestController {
@@ -38,4 +35,8 @@ public class TestController {
     }
 
 
+    @GetMapping("t")
+    public ModelAndView t(){
+        return new ModelAndView("test");
+    }
 }

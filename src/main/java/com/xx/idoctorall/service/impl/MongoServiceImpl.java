@@ -1,7 +1,7 @@
 package com.xx.idoctorall.service.impl;
 
-import com.xx.idoctorall.dao.MongoTestRepository;
-import com.xx.idoctorall.entity.Customer;
+import com.xx.idoctorall.dao.api.MongoTestRepository;
+import com.xx.idoctorall.entity.test.Customer;
 import com.xx.idoctorall.service.MongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

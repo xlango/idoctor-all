@@ -1,12 +1,10 @@
 package com.xx.idoctorall.dao;
 
 import com.xx.idoctorall.BaseTests;
-import com.xx.idoctorall.entity.User;
+import com.xx.idoctorall.dao.api.UserRepository;
+import com.xx.idoctorall.entity.relation.User;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
@@ -46,6 +44,7 @@ public class UserRepositoryTest extends BaseTests {
         user.setPhone("test");
         user.setRoleid(2);
 
-        userRepository.save(user);
+        User save = userRepository.save(user);
+        System.out.println(save.toString());
     }
 }

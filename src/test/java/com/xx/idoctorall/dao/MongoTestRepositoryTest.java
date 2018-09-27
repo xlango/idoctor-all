@@ -1,11 +1,10 @@
 package com.xx.idoctorall.dao;
 
-import com.xx.idoctorall.entity.Customer;
+import com.xx.idoctorall.dao.api.MongoTestRepository;
+import com.xx.idoctorall.entity.test.Customer;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import static org.junit.Assert.*;
 
 @Component
 public class MongoTestRepositoryTest {
