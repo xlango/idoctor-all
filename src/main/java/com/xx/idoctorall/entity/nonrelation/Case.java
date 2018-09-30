@@ -18,6 +18,6 @@ public class Case {
     private Long diagnosisresultid;//二诊结果id
     private Long hospitalizationid;//住院信息id
     private Long prescriptionid;  //药方id
-    private Data time;       //病例生成时间
+    private String time;       //病例生成时间
 
 }

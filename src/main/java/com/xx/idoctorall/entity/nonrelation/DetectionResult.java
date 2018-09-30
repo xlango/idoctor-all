@@ -17,6 +17,6 @@ public class DetectionResult {
     private Long did;//检查医生id
     private Long detectionid;//检查单id
     private String detectionname;//检查项名
-    private Data time;//检查时间
+    private String time;//检查时间
     private List<String> detaillist;//检查结果项（结果1、结果2......）
 }

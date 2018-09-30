@@ -9,20 +9,23 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Repository
-public class QuequeDaoImpl implements QuequeCustomDao {
+public class QuequeCustomDaoImpl implements QuequeCustomDao {
 
     @Autowired
     private MongoTemplate mongoTemplate;
+
+    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @Override
     public void updateByPidandDid(Long pid, Long did, Queque queque) {
         Query query = new Query(Criteria.where("pid").is(pid).and("did").is(did));
         Update update = new Update();
         update.set("status",queque.getStatus());
-        update.set("time",new Date());
+        update.set("time",sdf.format(new Date()));
         mongoTemplate.updateFirst(query,update,Queque.class);
     }
 }

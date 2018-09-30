@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class QuequeRepositoryTest extends BaseTests {
@@ -20,13 +21,15 @@ public class QuequeRepositoryTest extends BaseTests {
     @Autowired
     private QuequeDao quequeDao;
 
+    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     @Test
     public void save() {
         Queque queque=new Queque();
         queque.setDid(2L);
         queque.setPid(2L);
         queque.setStatus(1);
-        queque.setTime(new Date());
+        queque.setTime(sdf.format(new Date()));
         quequeDao.save(queque);
     }
 

@@ -15,7 +15,7 @@ public class Diagnosis {
     //private Long id;
     private Long pid;//病人id
     private Long did;//医生id
-    private Data time;//就诊时间
+    private String time;//就诊时间
     private List<String> detaillist;//就诊详细情况扩展
 
 }
