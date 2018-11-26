@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -33,5 +35,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String userName) {
         return userRepository.findByUsername(userName);
+    }
+
+    @Override
+    public List<User> findByRoleid(int roleId) {
+        return userRepository.findByRoleid(roleId);
     }
 }

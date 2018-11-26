@@ -42,10 +42,25 @@ public class User implements Serializable {
     private String sex;    //性别
     private String logo;   //logo存储地址
 
-    public String toString(){
-        return "{" +"'"+id+"':"+id+",'"+name+"':"+name+",'"+username+"':"+username+",'"+email+"':"+email+",'"+roleid+"':"+roleid+
-                ",'"+phone+"':"+phone+",'"+idcard+"':"+idcard+",'"+adress+"':"+adress+",'"+sex+"':"+sex+
-                "}";
-    }
+
+
+    /*@Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", rememberMe=" + rememberMe +
+                ", name='" + name + '\'' +
+                ", roleid=" + roleid +
+                ", phone='" + phone + '\'' +
+                ", birthday=" + birthday +
+                ", idcard='" + idcard + '\'' +
+                ", adress='" + adress + '\'' +
+                ", sex='" + sex + '\'' +
+                ", logo='" + logo + '\'' +
+                '}';
+    }*/
 }
 

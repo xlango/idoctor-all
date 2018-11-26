@@ -1,2 +1,0 @@
-server:
-  port: ${CLIENT1_PORT:8766}

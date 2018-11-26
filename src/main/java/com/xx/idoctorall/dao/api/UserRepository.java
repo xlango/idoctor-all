@@ -1,5 +1,6 @@
 package com.xx.idoctorall.dao.api;
 
+
 import com.xx.idoctorall.entity.relation.User;
 import org.springframework.data.repository.CrudRepository;
 
@@ -17,4 +18,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
     User save(User user) ;
 
     User findByUsername(String userName);
+
+    List<User> findByRoleid(int roleId);
 }

@@ -45,6 +45,6 @@ public class UserRepositoryTest extends BaseTests {
         user.setRoleid(2);
 
         User save = userRepository.save(user);
-        System.out.println(save.toString());
+       // System.out.println(save.toString());
     }
 }

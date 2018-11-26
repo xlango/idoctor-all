@@ -6,4 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface GuahaoRepository extends CrudRepository<GuaHao,Long> {
 
     GuaHao findByDidAndPid(Long did,Long pid);
+
+    GuaHao save(GuaHao guaHao);
 }
