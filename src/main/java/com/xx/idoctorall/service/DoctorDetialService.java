@@ -2,7 +2,11 @@ package com.xx.idoctorall.service;
 
 import com.xx.idoctorall.entity.relation.DoctorDetial;
 
+import java.util.List;
+
 public interface DoctorDetialService {
 
-    DoctorDetial findByDoctorId(Long doctorid);
+    DoctorDetial findByDoctorId(int doctorid);
+
+    List<DoctorDetial> findAllByHospital(DoctorDetial doctorDetial);
 }

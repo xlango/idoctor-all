@@ -15,7 +15,7 @@ public class CommentServiceImpl implements CommentService {
     private CommentRepository commentRepository;
 
     @Override
-    public List<Comment> findByUserid(Long userid) {
+    public List<Comment> findByUserid(int userid) {
         return commentRepository.findByUserid(userid);
     }
 

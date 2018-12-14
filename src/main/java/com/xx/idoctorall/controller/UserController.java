@@ -2,11 +2,9 @@ package com.xx.idoctorall.controller;
 
 import com.xx.idoctorall.entity.relation.User;
 import com.xx.idoctorall.service.impl.UserServiceImpl;
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,43 @@ public class UserController {
     @GetMapping("/findByRoleId")
     public List<User> findByRoleId(int roleId){
         return userService.findByRoleid(roleId);
+    }
+
+    @GetMapping("/findByUsername")
+    public User findByUsername(String username){
+        return userService.findByUsername(username);
+    }
+
+    @GetMapping("/findById")
+    public User findById(int id){
+        return userService.findById(id);
+    }
+
+    @PostMapping("/save")
+    public User save(User user){
+        return userService.save(user);
+    }
+
+    @PostMapping("/updateRealnameStatus")
+    public int updateRealnameStatus(User user){
+        return userService.updateRealnameStatus(user);
+    }
+
+    @PostMapping("/update")
+    public int update(User user){
+        return userService.update(user);
+    }
+
+    @PostMapping("/updatePwdById")
+    public int updatePwdById(String username,String pwd,String newpwd){
+        User user=userService.findByUsername(username);
+        pwd=String.valueOf(new Md5Hash(pwd,username));
+        if (user.getPassword().equals(pwd)){
+            user.setPassword(String.valueOf(new Md5Hash(newpwd,username)));
+            return userService.updatePwdById(user);
+        }else {
+            return -1;
+        }
+
     }
 }

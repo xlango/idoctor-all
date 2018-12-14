@@ -13,4 +13,12 @@ public interface UserService {
     User findByUsername(String userName);
 
     List<User> findByRoleid(int roleId);
+
+    User findById(int id);
+
+    int update(User user);
+
+    int updatePwdById(User user);
+
+    int updateRealnameStatus(User user);
 }

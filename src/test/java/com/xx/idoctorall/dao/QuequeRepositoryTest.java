@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class QuequeRepositoryTest extends BaseTests {
 
@@ -25,12 +24,12 @@ public class QuequeRepositoryTest extends BaseTests {
 
     @Test
     public void save() {
-        Queque queque=new Queque();
-        queque.setDid(2L);
-        queque.setPid(2L);
-        queque.setStatus(1);
-        queque.setTime(sdf.format(new Date()));
-        quequeDao.save(queque);
+//        Queque queque=new Queque();
+//        queque.setDid(2L);
+//        queque.setPid(2L);
+//        queque.setStatus(1);
+//        queque.setTime(sdf.format(new Date()));
+//        quequeDao.save(queque);
     }
 
     @Test

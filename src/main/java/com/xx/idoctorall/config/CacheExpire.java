@@ -5,7 +5,7 @@ import org.springframework.core.annotation.AliasFor;
 import java.lang.annotation.*;
 
 /**
- * @author wjw
+ * @author xyl
  * 2018/7/12
  */
 @Target({ElementType.METHOD, ElementType.TYPE})

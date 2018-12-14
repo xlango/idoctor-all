@@ -1,5 +1,7 @@
 package com.xx.idoctorall.dao;
 
-public interface PrescriptionDao {
+import com.xx.idoctorall.dao.api.PrescriptionRepository;
+
+public interface PrescriptionDao extends PrescriptionRepository {
 
 }

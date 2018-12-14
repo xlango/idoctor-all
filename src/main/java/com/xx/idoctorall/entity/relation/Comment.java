@@ -14,8 +14,9 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    Long userid;
+    int id;
+    int userid;
+    int createrid;
     String content;
     Date createTime;
 

@@ -44,6 +44,18 @@ def zryy(method,content):
 
 class MainHandler(tornado.web.RequestHandler):
     executor = ThreadPoolExecutor(32)
+
+    """ handler基类 """
+    def set_default_headers(self):
+        self.set_header("Access-Control-Allow-Origin", "*");
+        self.set_header("Access-Control-Allow-Headers", "x-requested-with,access_token");#这里要填写上请求带过来的Access-Control-Allow-Headers参数，如access_token就是我请求带过来的参数
+        self.set_header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE"); #请求允许的方法
+        self.set_header("Access-Control-Max-Age", "3600");#用来指定本次预检请求的有效期，单位为秒，，在此期间不用发出另一条预检请求。
+        #定义一个响应OPTIONS 请求，不用作任务处理
+    def options(self):
+        pass
+
+
     @tornado.gen.coroutine
     def get(self):
         '''get接口'''

@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Data
@@ -16,21 +15,12 @@ import java.util.Date;
 public class GuaHao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long pid; //病人id
-    private Long did; //医生id
+    private int id;
+    private int pid; //病人id
+    private String pname;//病人姓名
+    private int did; //医生id
+    private String dname;//医生姓名
     private Date time;//挂号时间
+    private int status;//处理状态
 
-    public static void main(String[] args) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        GuaHao guaHao=new GuaHao();
-        guaHao.setId(1L);
-        guaHao.setPid(1L);
-        guaHao.setDid(1L);
-        guaHao.setTime(new Date());
-
-
-        System.out.println(df.format(guaHao.getTime()));
-
-    }
 }

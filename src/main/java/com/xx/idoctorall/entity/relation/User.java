@@ -19,7 +19,7 @@ public class User implements Serializable {
     @ApiModelProperty("用户id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;   //病号
+    private int id;   //病号
     @ApiModelProperty("用户名")
     private String username;  //用户名
     @ApiModelProperty("用户密码")
@@ -41,8 +41,9 @@ public class User implements Serializable {
     private String adress; //地址
     private String sex;    //性别
     private String logo;   //logo存储地址
-
-
+    private int realnamestatus;//实名状态
+    private String idcardimgzheng;//身份证正面
+    private String idcardimgfan;//身份证反面
 
     /*@Override
     public String toString() {

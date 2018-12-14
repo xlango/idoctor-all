@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface CommentService {
 
-    List<Comment> findByUserid(Long userid);
+    List<Comment> findByUserid(int userid);
     Comment save(Comment comment);
 }

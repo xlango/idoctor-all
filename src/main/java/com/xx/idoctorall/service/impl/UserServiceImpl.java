@@ -41,4 +41,25 @@ public class UserServiceImpl implements UserService {
     public List<User> findByRoleid(int roleId) {
         return userRepository.findByRoleid(roleId);
     }
+
+    @Override
+    public User findById(int id) {
+        return userRepository.findById(id);
+    }
+
+    @Override
+    public int update(User user) {
+        return userRepository.update(user.getName(),user.getSex(),user.getEmail(),user.getPhone(),user.getId());
+    }
+
+    @Override
+    public int updatePwdById(User user) {
+        return userRepository.updatePwdById(user.getPassword(),user.getId());
+    }
+
+    @Override
+    public int updateRealnameStatus(User user) {
+        return userRepository.updateRealnameStatus(user.getRealnamestatus(),user.getUsername());
+    }
+
 }

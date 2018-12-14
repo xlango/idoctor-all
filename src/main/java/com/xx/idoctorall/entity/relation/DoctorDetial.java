@@ -15,12 +15,14 @@ public class DoctorDetial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long doctorId; //医生编号
+    private int id;
+    private int doctorId; //医生编号
     private String job; //职称
     private String hospital;//所属医院
     private String department;//科室
     private String worktime; //工作年限
     private String detial;  //详细描述
+    private String profession;//专业
+    private String school;//毕业学校
 
 }
