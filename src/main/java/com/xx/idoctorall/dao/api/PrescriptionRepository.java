@@ -17,4 +17,6 @@ public interface PrescriptionRepository extends CrudRepository<Prescription,Inte
     @Query(value = "select * from prescription where pid =?1 ORDER BY time desc LIMIT 1", nativeQuery = true)
     Prescription findNew(int pid);
 
+    @Query(value = "SELECT * FROM `user` u JOIN prescription p ON u.id=p.pid WHERE p.did=?1  ORDER BY time desc", nativeQuery = true)
+    List<Prescription> findByPatient(int did);
 }

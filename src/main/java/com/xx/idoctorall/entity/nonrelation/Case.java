@@ -13,7 +13,7 @@ import java.util.Date;
  * 病例
  */
 @Data
-@Entity(name = "case")
+@Entity(name = "pcase")
 @ApiModel
 public class Case {
     //病号，病症单号，检测单号，姓名、诊断结果、药单号

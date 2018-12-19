@@ -29,4 +29,9 @@ public class PrescriptionServiceImpl implements PrescriptionService {
     public Prescription findNew(int pid) {
         return prescriptionDao.findNew(pid);
     }
+
+    @Override
+    public List<Prescription> findByPatient(int did) {
+        return prescriptionDao.findByPatient(did);
+    }
 }

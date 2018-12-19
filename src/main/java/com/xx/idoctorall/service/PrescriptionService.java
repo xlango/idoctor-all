@@ -11,4 +11,6 @@ public interface PrescriptionService {
     List<Prescription> findByPidAndTimeLike(int pid, String date);
 
     Prescription findNew(int pid);
+
+    List<Prescription> findByPatient(int did);
 }

@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/prescription")
@@ -41,5 +44,10 @@ public class PrescriptionController {
     @GetMapping("/findNew")
     public Prescription findNew(int pid){
         return prescriptionService.findNew(pid);
+    }
+
+    @GetMapping("/findByPatient")
+    public List<Prescription> findByPatient(int did){
+        return prescriptionService.findByPatient(did);
     }
 }

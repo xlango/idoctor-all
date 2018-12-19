@@ -24,5 +24,7 @@ public class Diagnosis {
     private int did;//医生id
     private Date time;//就诊时间
     private String detaillist;//就诊详细情况扩展
+    private String symptom;//疾病症状
+    private String detection;//检查结果
 
 }

@@ -21,4 +21,10 @@ public interface UserService {
     int updatePwdById(User user);
 
     int updateRealnameStatus(User user);
+
+    List<User> findByHospital(String hospital);
+
+    List<User> findByPatient(int did);
+
+    int updateRealname(User user);
 }

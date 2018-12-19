@@ -41,4 +41,14 @@ public interface UserRepository extends CrudRepository<User, Integer> {
     @Query(value = "update User u set u.realnamestatus=?1 where u.username=?2", nativeQuery = true)
     int updateRealnameStatus(int status,String username);
 
+    @Modifying
+    @Query(value = "update User u set u.idcard=?1,u.name=?2,u.idcardimgzheng=?3,u.idcardimgfan=?4 where u.username=?5", nativeQuery = true)
+    int updateRealname(String idcard,String name,String idcardimgzheng,String idcardimgfan,String username);
+
+    @Query(value = "SELECT * FROM user u JOIN doctor_detial d ON u.id=d.doctor_id WHERE d.hospital=?1", nativeQuery = true)
+    List<User> findByHospital(String hospital);
+
+    @Query(value = "SELECT * FROM user u JOIN prescription p ON u.id=p.pid WHERE p.did=?1  ORDER BY time desc", nativeQuery = true)
+    List<User> findByPatient(int did);
+
 }

@@ -62,4 +62,19 @@ public class UserServiceImpl implements UserService {
         return userRepository.updateRealnameStatus(user.getRealnamestatus(),user.getUsername());
     }
 
+    @Override
+    public List<User> findByHospital(String hospital) {
+        return userRepository.findByHospital(hospital);
+    }
+
+    @Override
+    public List<User> findByPatient(int did) {
+        return userRepository.findByPatient(did);
+    }
+
+    @Override
+    public int updateRealname(User user) {
+        return userRepository.updateRealname(user.getIdcard(),user.getName(),user.getIdcardimgzheng(),user.getIdcardimgfan(),user.getUsername());
+    }
+
 }

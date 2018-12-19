@@ -25,7 +25,7 @@ public class ShiroConfig {
         DefaultWebSecurityManager securityManager =  new DefaultWebSecurityManager();
         //设置realm.
         securityManager.setRealm(myShiroRealm());
-        securityManager.setCacheManager(ehCacheManager()); //注入缓存对象。
+        //securityManager.setCacheManager(ehCacheManager()); //注入缓存对象。
         securityManager.setRememberMeManager(cookieRememberMeManager()); //注入rememberMeManager;
         return securityManager;
     }

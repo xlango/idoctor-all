@@ -138,9 +138,9 @@ public class FileController {
     }
 
 
-    @GetMapping("/pdf/load")
-    public boolean pdfload(HttpServletResponse response,String file) {
-        String fileName=file;
+    @GetMapping("/pdf/load/{name}")
+    public boolean pdfload(HttpServletResponse response,@PathVariable("name")String name) {
+        String fileName=name;
         String filePath = this.getClass().getClassLoader().getResource("files/").getPath();
         try {
             //获取输入流

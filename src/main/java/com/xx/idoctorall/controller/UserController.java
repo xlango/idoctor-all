@@ -26,6 +26,16 @@ public class UserController {
         return userService.findByUsername(username);
     }
 
+    @GetMapping("/findByHospital")
+    public List<User> findByHospital(String hospital){
+        return userService.findByHospital(hospital);
+    }
+
+    @GetMapping("/findByPatient")
+    public List<User> findByPatient(int did){
+        return userService.findByPatient(did);
+    }
+
     @GetMapping("/findById")
     public User findById(int id){
         return userService.findById(id);
@@ -34,6 +44,11 @@ public class UserController {
     @PostMapping("/save")
     public User save(User user){
         return userService.save(user);
+    }
+
+    @PostMapping("/updateRealname")
+    public int updateRealname(User user){
+        return userService.updateRealname(user);
     }
 
     @PostMapping("/updateRealnameStatus")

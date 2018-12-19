@@ -44,6 +44,7 @@ public class User implements Serializable {
     private int realnamestatus;//实名状态
     private String idcardimgzheng;//身份证正面
     private String idcardimgfan;//身份证反面
+    private String zhizhao;//医生执照
 
     /*@Override
     public String toString() {
